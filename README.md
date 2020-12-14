@@ -12,6 +12,7 @@
   2. Velocidade
   3. Latitude 
   4. Longitude
+  5. Teste
   
 ### Arquitetura do projeto
 
@@ -31,7 +32,7 @@
  ![Arquitetura projeto](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/Arquitetura_projeto.png)
  
  
- Por meio do módulo de acelerômetro e giroscópio foi possível obter dados de aceleração e velocidade angular nos eixos X, Y e Z. Esses dados, aliados com a bússola, permitiram calcular Roll, Pitch e Yaw.
+  Por meio do módulo de acelerômetro e giroscópio foi possível obter dados de aceleração e velocidade angular nos eixos X, Y e Z. Esses dados, aliados com a bússola, permitiram calcular Roll, Pitch e Yaw.
 
 Além disso, por meio do módulo de GPS, obtemos os dados de latitude, longitude e velocidade instantânea.
 
