@@ -9,7 +9,7 @@
   2. Mínimo Delay entre Aquisição e Amostra de Dados processados: Da mesma forma que a aquisição de dados deve ser alta, o tempo de processamento desses dados para mostrar para o piloto deve ser baixo. (máximo em 250 ms)
   3. Confiabilidade. Elemento crítico, componentes devem apresentar certificação aeronáutica para garantir baixa probabilidade de falha. A falha de um componente não deve atrapalhar o funcionamento dos outros nem de sistema em geral. Um sistema de backup pode ser cogitado.
 
-### Dados aquisitadas:
+### Dados aquisitados:
 
   1. Ângulos de rolagem: Roll, Pitch e Yaw
   2. Velocidade
