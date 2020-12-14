@@ -6,66 +6,59 @@
 
 ![Horizonte Artificial](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/horizonte%20artificial.png)
 
+### Requisitos:
+  1. Frequência de Aquisição: A freqûencia de aquisição dos dados deve ser bem alta, pois o piloto deve saber com precisão a situação real da aeronave para a tomada de decisão. (10-100Hz)
+  2. Mínimo Delay entre Aquisição e Amostra de Dados processados: Da mesma forma que a aquisição de dados deve ser alta, o tempo de processamento desses dados para mostrar para o piloto deve ser baixo. (máximo em 250 ms)
+  3. Confiabilidade. Elemento crítico, componentes devem apresentar certificação aeronáutica para garantir baixa probabilidade de falha. A falha de um componente não deve atrapalhar o funcionamento dos outros nem de sistema em geral. Um sistema de backup pode ser cogitado.
+
 ### Dados aquisitadas:
 
   1. Ângulos de rolagem: Roll, Pitch e Yaw
   2. Velocidade
   3. Latitude 
   4. Longitude
-  5. Teste
   
 ### Arquitetura do projeto
 
   O projeto consistiu em elaborar um sistema embarcado capaz de coletar dados em voo e enviá-los para uma base em solo que fará o display em um horizonte artificial.Para isso, foram utilizados as seguintes instrumentações:
   
-  1.Microcontrolador: STM32F103C8
-  2.Acelerômetro/Giroscópio: comunicação I2C com módulo GY521
-  3.GPS: comunicação UART com módulo UBLOX NEO 6M
-  4.LoRa: comunicação UART com módulo E32-100-TTL
-  5.Magnetômetro: leitura de dado analógico
+  1.  Microcontrolador: STM32F103C8
+  2.  Acelerômetro/Giroscópio: comunicação I2C com módulo GY521
+  3.  GPS: comunicação UART com módulo UBLOX NEO 6M
+  4.  LoRa: comunicação UART com módulo E32-100-TTL
+  5.  Magnetômetro: leitura de dado analógico
   
   Em conjunto, foram desenvolvidos dois softwares:
   
-  1.Software para microcontrolador: STM32IDE (linguagem C)
-  2.Software para o display: Visual Code (Python)
+  1.  Software para microcontrolador: STM32IDE (linguagem C)
+  2.  Software para o display: Visual Code (Python)
   
  ![Arquitetura projeto](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/Arquitetura_projeto.png)
  
- 
-  Por meio do módulo de acelerômetro e giroscópio foi possível obter dados de aceleração e velocidade angular nos eixos X, Y e Z. Esses dados, aliados com a bússola, permitiram calcular Roll, Pitch e Yaw.
+  Por meio do módulo de acelerômetro e giroscópio foi possível obter dados de aceleração e velocidade angular nos eixos X, Y e Z. Esses dados, aliados com a bússola, permitiram calcular Roll, Pitch e Yaw.Além disso, por meio do módulo de GPS, obtemos os dados de latitude, longitude e velocidade instantânea.
 
-Além disso, por meio do módulo de GPS, obtemos os dados de latitude, longitude e velocidade instantânea.
-
-Esses dados são enviados por meio do transmissor LoRa, no seguinte formato:
-roll;pitch;yaw;latitude;longitude;velocidade
-Todos os dados são float, com pelo menos 2 casas decimais.
-
-Um outro transmissor LoRa fica conectado ao computador, que recebe os dados e os exibe no programa desenvolvido em Python para o display no horizonte infinito em tempo real.
+  Esses dados são enviados por meio do transmissor LoRa, no seguinte formato:(i)roll; (ii)pitch; (iii)yaw; (iv)latitude; (v)longitude e (vi)velocidade
   
+  Todos os dados são float, com pelo menos 2 casas decimais.
+
+  Um outro transmissor LoRa fica conectado ao computador, que recebe os dados e os exibe no programa, o qual consiste em um horizonte artificial que recebe dados via SerialPort e os mostra numa interface gráfica em tempo real, sendo essa feita utilizando a biblioteca tkinter. Nela é possível selecionar a porta COM pela qual os dados serão recebidos e o BaudRate da comunicação. 
   
+  Os dados recebidos são: (i) Roll; (ii) Pitch; (iii) Yaw; (iv) Lat1; (v) Lat2; (vi) Long1; (vii) Long2 e (viii) Velocidade, em que:
+  1.  Roll, Pitch e Yaw são dados em radianos
+  2.  Lat1 é DDMM e Lat2 é mmmm
+  3.  Long1 é DDDMM e long2 é mmmm, sendo D um digito de do Grau de lat ou long, M um digito de minuto e m um digito de minuto * 10^-2
 
+### Teste
 
-### Requisitos:
-  1. Frequência de Aquisição: A freqûencia de aquisição dos dados deve ser bem alta, pois o piloto deve saber com precisão a situação real da aeronave para a     tomada de decisão. (10-100Hz)
-  2. Mínimo Delay entre Aquisição e Amostra de Dados processados: Da mesma forma que a aquisição de dados deve ser alta, o tempo de processamento desses dados para mostrar para o piloto deve ser baixo. (máximo em 250 ms)
-  3. Confiabilidade. Elemento crítico, componentes devem apresentar certificação aeronáutica para garantir baixa probabilidade de falha. A falha de um componente não deve atrapalhar o funcionamento dos outros nem de sistema em geral. Um sistema de backup pode ser cogitado.
-
-
-### Testes
-
-
-### Construído com
-
-
-### Controle de versão
+  Foi realizado um teste simulando o projeto embarcado em funcionamento, que pode ser visto em um vídeo colocado nesse repositório.
 
 
 ### Alunos
 
-* Alexsander S. Sena
+* Alexsander S. Sena -
 * Artur T. Diniz - 10308850
-* Danilo H. Akiyama
-* Guillhermo A. Krauch
+* Danilo H. Akiyama -
+* Guillhermo A. Krauch - 
 
 
 ### Instituição
