@@ -28,7 +28,7 @@
   1.Software para microcontrolador: STM32IDE (linguagem C)
   2.Software para o display: Visual Code (Python)
   
- 
+ ![Arquitetura_projeto](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/Arquitetura_projeto.png)
  
  
  Por meio do módulo de acelerômetro e giroscópio foi possível obter dados de aceleração e velocidade angular nos eixos X, Y e Z. Esses dados, aliados com a bússola, permitiram calcular Roll, Pitch e Yaw.
