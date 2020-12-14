@@ -50,7 +50,8 @@
 
   Foi realizado um teste simulando o projeto embarcado em funcionamento, que pode ser visto em um vídeo colocado nesse repositório. Para esse teste foi montado um protoboard de aquisição dos dados com os sensores e o microcontrolador, que iria dentro do avião e a antena de recepção conectada no computador. Eles podem ser visualizados em sequência, respectivamente, nas fotos abaixo:
   
-
+ ![Aquisição_dados_](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/Arquitetura_projeto.png)
+ ![Arquitetura projeto](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/Arquitetura_projeto.png)
 
 ### Alunos
 
