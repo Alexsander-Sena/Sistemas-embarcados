@@ -1,17 +1,48 @@
-# Sistemas-embarcados
+# Sistemas Embarcados
 
-#### AQUISIÇÃO DE DADOS DE UM AVIÃO EM VOO PARA SER VISUALISADO POR UM OPERADOR NO SOLO ATRAVÉS DE UM HORIZONTE ARTIFICIAL
+#### On Board - Data Logger
 
-##### Este projeto tem como objetivo a implementação de recursos de aquisição de dados de uma aeronave em voo. Esses dados vão ser enviados e mostrados para um operador em solo.  
+##### Este projeto tem como objetivo a implementação de recursos para a aquisição de dados de uma aeronave em voo. Esses dados vão ser enviados e mostrados em um horizonte artificial para um operador em solo.  
 
 ![Horizonte Artificial](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/horizonte%20artificial.png)
 
-### Magnitudes aquisitadas:
-  1. Velocidades CAS, TAS -> Pitot/Tomada de pressão Dinâmica e Estática
-  2 .Altitude Pressão (ISA) -> Tomada de pressão estática
-  3. VS (velocidade vertical) -> Tomada de variação de pressão estática 
-  4. Medir atitude e direção de voo -> Giroscópio, Bússola (ver correção de bússola)
-  6. Ground Speed (pelo GPS) (Secundário)
+### Dados aquisitadas:
+
+  1. Ângulos de rolagem: Roll, Pitch e Yaw
+  2. Velocidade
+  3. Latitude 
+  4. Longitude
+  
+### Arquitetura do projeto
+
+  O projeto consistiu em elaborar um sistema embarcado capaz de coletar dados em voo e enviá-los para uma base em solo que fará o display em um horizonte artificial.Para isso, foram utilizados as seguintes instrumentações:
+  
+  1.Microcontrolador: STM32F103C8
+  2.Acelerômetro/Giroscópio: comunicação I2C com módulo GY521
+  3.GPS: comunicação UART com módulo UBLOX NEO 6M
+  4.LoRa: comunicação UART com módulo E32-100-TTL
+  5.Magnetômetro: leitura de dado analógico
+  
+  Em conjunto, foram desenvolvidos dois softwares:
+  
+  1.Software para microcontrolador: STM32IDE (linguagem C)
+  2.Software para o display: Visual Code (Python)
+  
+ 
+ 
+ 
+ Por meio do módulo de acelerômetro e giroscópio foi possível obter dados de aceleração e velocidade angular nos eixos X, Y e Z. Esses dados, aliados com a bússola, permitiram calcular Roll, Pitch e Yaw.
+
+Além disso, por meio do módulo de GPS, obtemos os dados de latitude, longitude e velocidade instantânea.
+
+Esses dados são enviados por meio do transmissor LoRa, no seguinte formato:
+roll;pitch;yaw;latitude;longitude;velocidade
+Todos os dados são float, com pelo menos 2 casas decimais.
+
+Um outro transmissor LoRa fica conectado ao computador, que recebe os dados e os exibe no programa desenvolvido em Python para o display no horizonte infinito em tempo real.
+  
+  
+
 
 ### Requisitos:
   1. Frequência de Aquisição: A freqûencia de aquisição dos dados deve ser bem alta, pois o piloto deve saber com precisão a situação real da aeronave para a     tomada de decisão. (10-100Hz)
