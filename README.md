@@ -2,11 +2,11 @@
 
 #### On Board - Data Logger
 
-##### Este projeto tem como objetivo a implementação de recursos para a aquisição de dados de uma aeronave em voo. Esses dados vão ser enviados e mostrados em um horizonte artificial para um operador em solo.  
+##### Este projeto tem como objetivo a implementação de recursos para a aquisição de dados de uma aeronave em voô. Esses dados vão ser enviados e mostrados em um horizonte artificial para um operador em solo.  
 
 ### Requisitos:
-  1. Frequência de Aquisição: A freqûencia de aquisição dos dados deve ser bem alta, pois o piloto deve saber com precisão a situação real da aeronave para a tomada de decisão. (10-100Hz)
-  2. Mínimo Delay entre Aquisição e Amostra de Dados processados: Da mesma forma que a aquisição de dados deve ser alta, o tempo de processamento desses dados para mostrar para o piloto deve ser baixo. (máximo em 250 ms)
+  1. Frequência de Aquisição: A freqûencia de aquisição dos dados deve ser bem alta, pois o piloto deve saber com precisão a situação real da aeronave para a tomada de decisão. 
+  2. Mínimo Delay entre Aquisição e Amostra de Dados processados: Da mesma forma que a aquisição de dados deve ser alta, o tempo de processamento desses dados para mostrar para o piloto deve ser baixo. 
   3. Confiabilidade. Elemento crítico, componentes devem apresentar certificação aeronáutica para garantir baixa probabilidade de falha. A falha de um componente não deve atrapalhar o funcionamento dos outros nem de sistema em geral. Um sistema de backup pode ser cogitado.
 
 ### Dados aquisitados:
