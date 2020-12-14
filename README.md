@@ -1,8 +1,8 @@
 # Sistemas-embarcados
 
-#### AQUISIÇÃO DE DADOS DE UM AVIÃO EM VOO PARA SER VISUALISADO PELO PILOTO EM TEMPO REAL ATRAVÉS DE UM HORIZONTE ARTIFICIAL
+#### AQUISIÇÃO DE DADOS DE UM AVIÃO EM VOO PARA SER VISUALISADO POR UM OPERADOR NO SOLO ATRAVÉS DE UM HORIZONTE ARTIFICIAL
 
-##### Este projeto tem como objetivo a implementação de recursos de aquisição de dados de uma aeronave em voo. Esses dados devem ser incluídos para o piloto em tempo  real, através de um horizonte artificial.
+##### Este projeto tem como objetivo a implementação de recursos de aquisição de dados de uma aeronave em voo. Esses dados vão ser enviados e mostrados para um operador em solo.  
 
 ![Horizonte Artificial](https://github.com/Alexsander-Sena/Sistemas-embarcados/blob/main/horizonte%20artificial.png)
 
@@ -31,7 +31,7 @@
 ### Alunos
 
 * Alexsander S. Sena
-* Arthur T. Diniz
+* Artur T. Diniz - 10308850
 * Danilo H. Akiyama
 * Guillhermo A. Krauch
 
