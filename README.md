@@ -2,7 +2,7 @@
 
 #### On Board - Data Logger
 
-##### Este projeto tem como objetivo a implementação de recursos para a aquisição de dados de uma aeronave em voo. Esses dados vão ser enviados e mostrados em um horizonte artificial para um operador em solo.  
+##### Este projeto tem como objetivo a implementação de recursos para a aquisição de dados de uma aeronave em voô. Esses dados vão ser enviados e mostrados em um horizonte artificial para um operador em solo.  
 
 ### Requisitos:
   1. Frequência de Aquisição: A freqûencia de aquisição dos dados deve ser bem alta, pois o piloto deve saber com precisão a situação real da aeronave para a tomada de decisão. 
